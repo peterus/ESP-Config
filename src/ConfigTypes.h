@@ -68,6 +68,10 @@ public:
     return _value;
   }
 
+  String operator()() const {
+    return getValue();
+  }
+
 private:
   String _value;
 };
@@ -91,6 +95,10 @@ public:
     return _value;
   }
 
+  bool operator()() const {
+    return getValue();
+  }
+
 private:
   bool _value;
 };
@@ -110,8 +118,12 @@ public:
     _value = val;
   }
 
-  int getValue() const {
+  long getValue() const {
     return _value;
+  }
+
+  long operator()() const {
+    return getValue();
   }
 
 private:
@@ -135,6 +147,10 @@ public:
 
   double getValue() const {
     return _value;
+  }
+
+  double operator()() const {
+    return getValue();
   }
 
   int getPrecision() const {
